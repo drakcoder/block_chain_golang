@@ -27,7 +27,7 @@ func (pow *ProofOfWork) search() (int, []byte) {
 		tbh := pow.prepare_hash(int64(nonce))
 		hash := sha256.Sum256(tbh)
 		hashInt.SetBytes(hash[:])
-		fmt.Println(hashInt)
+		// fmt.Println(hashInt)
 		if hashInt.Cmp(pow.Target) == -1 {
 			fmt.Println("found", nonce)
 			return nonce, hash[:]

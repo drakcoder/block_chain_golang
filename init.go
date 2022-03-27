@@ -1,6 +1,8 @@
 package main
 
-import "math/big"
+import (
+	"math/big"
+)
 
 var TOP int = 0
 var LENGTH int = 0
