@@ -14,11 +14,11 @@ func new_pow(b *Block) *ProofOfWork {
 }
 
 func new_block(data string) *Block {
-	return &Block{Data: []byte(data), Mined: false}
+	return &Block{StringData: data, Data: []byte(data), Mined: false}
 }
 
-func new_gen_block() *Block {
-	return &Block{Data: []byte("Genisis Block"), PrevHash: []byte{}, Mined: true}
+func new_gen_block(data string) *Block {
+	return &Block{StringData: data, Data: []byte(data), PrevHash: []byte{}, Mined: false}
 }
 
 func new_block_chain() *BlockChain {

@@ -10,8 +10,8 @@ import (
 )
 
 type ProofOfWork struct {
-	Target *big.Int
-	Block  *Block
+	Target *big.Int `json:target`
+	Block  *Block   `json:block`
 }
 
 func (pow *ProofOfWork) prepare_hash(nonce int64) []byte {
