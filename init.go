@@ -9,7 +9,7 @@ var LENGTH int = 0
 
 func new_pow(b *Block) *ProofOfWork {
 	target := big.NewInt(1)
-	target = target.Lsh(target, 256-20)
+	target = target.Lsh(target, 256-22)
 	return &ProofOfWork{Target: target, Block: b}
 }
 
