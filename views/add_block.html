@@ -39,6 +39,11 @@
                 },
                 body: JSON.stringify(reqBody)
             })
+            if(data==undefined){
+                alert("Data not added")
+                return false
+            }
+            alert("Block has been added")
             return true;
         }
     </script>
